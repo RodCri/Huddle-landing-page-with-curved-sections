@@ -1,7 +1,186 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
-  background-color: #a94747;
-  font-size: 12px; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px; }
+
+a {
+  text-decoration: none;
+  color: #f5faff; }
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 3em; }
+
+.nav__cta {
+  padding: 0.5em 2em;
+  border-radius: 2em;
+  background-color: white;
+  border: 1px solid #ff8fd8;
+  color: #f5faff; }
+
+.nav__cta a {
+  color: #ff8fd8; }
+
+.hero {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 2em auto;
+  padding: 1em;
+  align-items: center;
+  text-align: center; }
+  .hero .hero__title {
+    font-family: 'Poppins', sans-serif;
+    color: #00252e;
+    padding: 2em 0; }
+  .hero .hero__info {
+    color: #00252e;
+    padding-bottom: 2em; }
+  .hero .hero__cta {
+    padding: 1em 4em;
+    border-radius: 2em;
+    background-color: #ff52bf;
+    border: 1px solid #ff52bf;
+    color: #ff8fd8; }
+
+.figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em; }
+  .figure img {
+    width: 60%; }
+
+.stadistics {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2em auto; }
+  .stadistics .stadistics__formed {
+    padding: 1em; }
+    .stadistics .stadistics__formed img {
+      width: 2em; }
+    .stadistics .stadistics__formed p {
+      font-size: 3em;
+      font-weight: 700; }
+    .stadistics .stadistics__formed span {
+      color: #00252e;
+      font-size: .8em; }
+  .stadistics .stadistics__sent {
+    padding: 1em; }
+    .stadistics .stadistics__sent img {
+      width: 2em; }
+    .stadistics .stadistics__sent p {
+      font-size: 3em;
+      font-weight: 700; }
+    .stadistics .stadistics__sent span {
+      color: #00252e;
+      font-size: .8em; }
+
+.services {
+  position: relative;
+  width: 100%;
+  margin: 15em auto;
+  padding: 2em 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .services .services__info {
+    width: 50%; }
+    .services .services__info .services__info-title {
+      padding: .4em 0;
+      font-size: 1.5em;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif; }
+  .services .services__figure {
+    width: 50%; }
+    .services .services__figure img {
+      width: 80%;
+      float: right; }
+
+.mod-l .services__info {
+  order: 2; }
+
+.mod-l .services__figure img {
+  float: left; }
+
+.mod {
+  background-color: #f6fbff; }
+
+.mod::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: 100%;
+  background-image: url("../images/bg-section-bottom-desktop-1.svg"); }
+
+.mod::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: -30%;
+  background-image: url("../images/bg-section-top-desktop-1.svg"); }
+
+.mod-b {
+  background-color: #f6fbff; }
+
+.mod-b::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: 100%;
+  background-image: url("../images/bg-section-bottom-desktop-2.svg"); }
+
+.mod-b::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: -30%;
+  background-image: url("../images/bg-section-top-desktop-2.svg"); }
+
+.community {
+  width: 100%;
+  margin: 15em 0;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .community .community__title {
+    padding: 1em 0;
+    font-size: 2em;
+    font-weight: 700; }
+  .community .community__cta {
+    padding: 1em 4em;
+    border-radius: 2em;
+    background-color: #ff52bf;
+    border: 1px solid #ff52bf;
+    color: #ff52bf; }
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #00252e;
+  color: #f5faff;
+  padding: 3em; }

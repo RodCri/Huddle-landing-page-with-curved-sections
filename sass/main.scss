@@ -1,9 +1,209 @@
 $primary-color: #a94747;
+$pink: hsl(322, 100%, 66%);
+$lightpink: hsl(321, 100%, 78%);
+$light-red: hsl(0, 100%, 63%);
+$verydarkcyan: hsl(192, 100%, 9%);
+$verypaleblue: hsl(207, 100%, 98%);
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
-    background-color: $primary-color;
-    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    //font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: $verypaleblue;
+}
+@mixin ctaButton ($ptb, $plr, $back, $bord, $coltext) {
+    padding: $ptb $plr;
+    border-radius: 2em;
+    background-color: $back;
+    border: 1px solid $bord;
+    color: $coltext;
+}
+// nav
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 3em;
+}
+
+.nav__cta{
+    @include ctaButton(.5em,2em, white, $lightpink, $verypaleblue);
+}
+.nav__cta a{
+    color: $lightpink;
+}
+// hero
+.hero{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+    padding: 1em;
+    align-items: center;
+    text-align: center;
+    .hero__title{
+        font-family: 'Poppins', sans-serif;       
+        color: $verydarkcyan;
+        padding: 2em 0;
+    }
+    .hero__info{
+        color: $verydarkcyan;
+        padding-bottom: 2em;
+    }
+    .hero__cta{
+        @include ctaButton(1em,4em,$pink,$pink,$lightpink);
+    }
+}
+// figure
+.figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+    img{
+        width: 60%;
+    }
+}
+// stadistics
+.stadistics{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em auto;
+    .stadistics__formed{
+        padding: 1em;
+        img{
+            width: 2em;
+        }
+        p{
+            font-size: 3em;
+            font-weight: 700;
+        }
+        span{
+            color: $verydarkcyan;           
+            font-size: .8em;
+        }
+    }
+    .stadistics__sent{
+        padding: 1em;
+        img{
+            width: 2em;
+        }
+        p{
+            font-size: 3em;
+            font-weight: 700;
+        }
+        span{
+            color: $verydarkcyan;           
+            font-size: .8em;
+        }
+    }
+}
+// services
+.services{
+    position: relative;
+    width: 100%;
+    margin: 15em auto;
+    padding: 2em 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .services__info{
+        width: 50%;
+        .services__info-title{
+            padding: .4em 0;
+            font-size: 1.5em;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+    .services__figure{
+        width: 50%;
+        img{
+            width: 80%;
+            float: right;
+        }
+    }
+}
+.mod-l{
+    .services__info{
+        order: 2;
+    }
+    .services__figure{
+        img{
+            float: left;
+        }
+    }
+}
+.mod{
+ background-color: #f6fbff;
+}
+@mixin bg-section ($p){
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    top: $p;
+}
+.mod::after{
+    @include bg-section(100%);
+    background-image: url('../images/bg-section-bottom-desktop-1.svg');
+}
+.mod::before{
+    @include bg-section(-30%);
+    background-image: url('../images/bg-section-top-desktop-1.svg');
+}
+.mod-b{
+    background-color: #f6fbff;
+}
+.mod-b::after{
+    @include bg-section(100%);
+    background-image: url('../images/bg-section-bottom-desktop-2.svg');
+}
+.mod-b::before{
+    @include bg-section(-30%);
+    background-image: url('../images/bg-section-top-desktop-2.svg');
+
+}
+// community
+.community{
+    width: 100%;
+    margin: 15em 0;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .community__title{
+        padding: 1em 0;
+        font-size: 2em;
+        font-weight: 700;
+    }
+    .community__cta{
+        @include ctaButton(1em,4em,$pink,$pink,$pink);
+    }
+}
+
+// footer
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: $verydarkcyan;
+    color: $verypaleblue;
+    padding: 3em;
 }
